@@ -10,16 +10,16 @@ __Source__: Todd Dibkey (Sugarbush Resort)
 __Serves__: n/a
 
 ## Ingredients
-3 T. olive oil
-1 onion, diced
-3 garlic cloves, minced
-2 c. short grain arborio rice
-1/2 c. dry white wine, or more chicken broth
-5 c. chicken broth, warmed
-1/4 c. chopped seasonal vegetables (zucchini, asparagus, carrots, tomatoes, etc.)
-1/2 c. freshly grated parmesan cheese
-2 T. butter
-salt and pepper to taste
+3 T. olive oil  
+1 onion, diced  
+3 garlic cloves, minced  
+2 c. short grain arborio rice  
+1/2 c. dry white wine, or more chicken broth  
+5 c. chicken broth, warmed  
+1/4 c. chopped seasonal vegetables (zucchini, asparagus, carrots, tomatoes, etc.)  
+1/2 c. freshly grated parmesan cheese  
+2 T. butter  
+salt and pepper to taste  
 
 ## Directions
 1. Sauté onion and garlic until translucent.
