@@ -1,6 +1,6 @@
 # Maple Mousse
 
-__Keywords__: Desserts
+__Keywords__: Dessert
 
 ## Details
 __Picture__: n/a
