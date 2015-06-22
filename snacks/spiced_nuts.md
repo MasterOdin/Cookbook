@@ -1,6 +1,6 @@
 # Spiced Nuts
 
-__Keywords__: Snack
+__Keywords__: Snacks
 
 ## Details
 __Picture__: n/a
