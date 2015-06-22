@@ -98,13 +98,14 @@ def compound_keywords(keyword1, keyword2):
 
 def generate_cookbook(categories, recipes):
     main_index = open("index.html", "w")
-    main_index.write("<h1>Cookbook</h1><br /><br />")
+    main_index.write("<h1>Cookbook</h1><br />\n")
     for key in categories.keys():
         path = os.path.join(URL,key)
-        main_index.write("<a href='%s'>%s</a><br />\n" % (path, path))
+        main_index.write("<a href='%s'>%s</a><br />\n" % (path, key.title()))
         if not os.path.exists(key):
             os.makedirs(key)
         index_file = open(os.path.join(key, "index.html"), "w")
+        index_file.write("<h1>%s</h1><br />\n" % (key.title()))
         for recipe in categories[key]:
             file_url = os.path.join(URL,key,recipe+".html")
             index_file.write("<a href='%s'>%s</a><br />\n" % (file_url, recipes[recipe]))
