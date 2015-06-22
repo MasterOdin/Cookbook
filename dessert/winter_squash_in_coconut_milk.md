@@ -18,4 +18,4 @@ pinch salt
 ## Directions
 1. In a saucepan, combine squash, butter, coconut milk, sugar and salt and bring to a slow boil.  
 2. Cook, stirring, until squash is tender, 15 to 20 minutes. Cool to room temperature or refrigerate.
-3. Just before serving, stir in vanilla. Purée mixture in blender or leave it chunky; serve cold or at room temperature.
+3. Just before serving, stir in vanilla. Pur&eacute;e mixture in blender or leave it chunky; serve cold or at room temperature.

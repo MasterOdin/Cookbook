@@ -22,7 +22,7 @@ __Serves__: n/a
 salt and pepper to taste  
 
 ## Directions
-1. Sauté onion and garlic until translucent.
+1. Saut&eacute; onion and garlic until translucent.
 2. Add rice and toast until it becomes fragrant.
 3. Pour in white wine and stir until completely dissolved.
 4. Add chicken broth one cup at a time, stirring until dissolved.
