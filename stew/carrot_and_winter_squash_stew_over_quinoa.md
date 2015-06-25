@@ -36,7 +36,7 @@ Pinch of saffron
 ## Directions
 ### Stew
 1. Heat oil in large saucepan over medium heat.
-2. Add onion; sauté until soft, stirring often, about 5 minutes.
+2. Add onion; saut&eacute; until soft, stirring often, about 5 minutes.
 3. Add garlic; stir 1 minute. Mix in paprika and next 8 ingredients.
 4. Add 1 cup water, tomatoes, and lemon juice. Bring to boil.
 5. Add squash and carrots.
@@ -49,7 +49,7 @@ Pinch of saffron
 2. Melt butter with oil in large saucepan over medium heat.
 3. Add onion and carrot.
 4. Cover; cook until vegetables begin to brown, stirring often, about 10 minutes.
-5. Add garlic, salt, and turmeric; sauté 1 minute.
+5. Add garlic, salt, and turmeric; saut&eacute; 1 minute.
 6. Add quinoa; stir 1 minute.
 7. Add 2 cups water. Bring to boil; reduce heat to medium-low.
 8. Cover; simmer until liquid is absorbed and quinoa is tender, about 15 minutes.
