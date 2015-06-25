@@ -46,7 +46,7 @@ def process_files(categories, recipes, get_dir="Cookbook"):
             file_name, file_extension = os.path.splitext(dir_file)
             if file_extension == ".md":
                 with open(full_file) as read:
-                    file_contents = read.read()
+                    file_contents = read.read().replace("\r\n","\n").replace("\r","\n")
                 title = get_title(file_contents)
                 recipes[file_name] = title
                 keywords = get_keywords(file_contents)
@@ -57,6 +57,7 @@ def process_files(categories, recipes, get_dir="Cookbook"):
                         categories[keyword].add(file_name)
                 html = markdown.markdown(file_contents)
                 write_file = os.path.join("processed",file_name+".html")
+                print('Writing file "%s"' % file_name)
                 with open(write_file, "w") as w:
                     w.write(html)
     #if get_dir == "Cookbook":
@@ -64,11 +65,14 @@ def process_files(categories, recipes, get_dir="Cookbook"):
 
 
 def get_keywords(contents):
-    i = contents.find("__Keywords__:")
+    i = contents.index("__Keywords__:")
     contents = contents[i:]
     i = contents.find("\n")
     keywords = contents[13:i].strip().lower()
-    return keywords.split(",")
+    keywords = keywords.split(",")
+    for i in range(len(keywords)):
+        keywords[i] = keywords[i].strip()
+    return keywords
 
 
 def get_title(contents):
@@ -78,12 +82,13 @@ def get_title(contents):
 
 def get_all_categories(categories):
     return
-    i = 0
+    # need to get all permuntations of all recipes
     keys = categories.keys()
     while i < len(keys):
         for j in range(i+1, len(keys)):
             new_keyword = compound_keywords(keys[i], keys[j])
-            categories[new_keyword] = categories[keys[i]] & categories[keys[j]]
+            if new_keyword not in categories:
+                categories[new_keyword] = categories[keys[i]] & categories[keys[j]]
         keys = categories.keys()
         i += 1
 
@@ -91,7 +96,7 @@ def get_all_categories(categories):
 def compound_keywords(keyword1, keyword2):
     keyword1 = keyword1.split("/")
     keyword2 = keyword2.split("/")
-    keyword = keyword1 + keyword2
+    keyword = list(set(keyword1 + keyword2))
     keyword.sort()
     return "/".join(keyword)
 
@@ -99,18 +104,19 @@ def compound_keywords(keyword1, keyword2):
 def generate_cookbook(categories, recipes):
     main_index = open("index.html", "w")
     main_index.write("<h1>Cookbook</h1><br />\n")
-    for key in categories.keys():
-        path = os.path.join(URL,key)
-        main_index.write("<a href='%s'>%s</a><br />\n" % (path, key.title()))
-        if not os.path.exists(key):
-            os.makedirs(key)
-        index_file = open(os.path.join(key, "index.html"), "w")
-        index_file.write("<h1>%s</h1><br />\n" % (key.title()))
-        for recipe in categories[key]:
-            file_url = os.path.join(URL,key,recipe+".html")
-            index_file.write("<a href='%s'>%s</a><br />\n" % (file_url, recipes[recipe]))
-            shutil.copyfile(os.path.join("processed", recipe+".html"),
-                            os.path.join(key, recipe+".html"))
+    for key in sorted(categories.keys()):
+        if len(categories[key]) > 0:
+            path = os.path.join(URL,key)
+            main_index.write("<a href='%s'>%s</a><br />\n" % (path, key.title()))
+            if not os.path.exists(key):
+                os.makedirs(key)
+            index_file = open(os.path.join(key, "index.html"), "w")
+            index_file.write("<h1>%s</h1><br />\n" % (key.title()))
+            for recipe in categories[key]:
+                file_url = os.path.join(URL,key,recipe+".html")
+                index_file.write("<a href='%s'>%s</a><br />\n" % (file_url, recipes[recipe]))
+                shutil.copyfile(os.path.join("processed", recipe+".html"),
+                                os.path.join(key, recipe+".html"))
 
 
 def generate():
