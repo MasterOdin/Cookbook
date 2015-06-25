@@ -1,6 +1,6 @@
 # Winter Squash in Coconut Milk
 
-__Keywords__: Dessert
+__Keywords__: Dessert, Soup
 
 ## Details
 __Picture__: n/a
