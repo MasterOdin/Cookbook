@@ -17,9 +17,9 @@ __Serves__: 4
 salt and freshly ground pepper to taste  
 1 lb skinless, boneless turkey breast, cut in 1-inch cubes  
 pinch of red pepper flakes  
-2 T. butter
-1 T. chopped fresh tarragon or parsley
-2 T. green onions, coarsely chopped
+2 T. butter  
+1 T. chopped fresh tarragon or parsley  
+2 T. green onions, coarsely chopped  
 
 ## Directions
 1. Drain the peppers, then rinse and pat them dry.
