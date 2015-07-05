@@ -1,6 +1,7 @@
 from __future__ import print_function
 from colorama import init, Fore
 import markdown2 as markdown
+import codecs
 import os
 import shutil
 import subprocess
@@ -58,7 +59,7 @@ def process_files(categories, recipes, get_dir="Cookbook"):
                 html = markdown.markdown(file_contents)
                 write_file = os.path.join("processed",file_name+".html")
                 print('Writing file "%s"' % file_name)
-                with open(write_file, "w") as w:
+                with codecs.open(write_file, "w", encoding='utf-8') as w:
                     w.write(html)
     #if get_dir == "Cookbook":
     #    print(Fore.GREEN + "DONE" + Fore.RESET)
