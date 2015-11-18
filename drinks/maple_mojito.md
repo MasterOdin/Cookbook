@@ -9,7 +9,7 @@ __Picture__: n/a
 Ice  
 6 oz. maple rum  
 12 mint sprigs, 8 roughly separated  
-6 T. lime juice (fresher the better)
+6 T. lime juice (fresher the better)  
 4 T. sugar (or simple syrup)  
 Club soda  
 4 slices lime
