@@ -6,10 +6,12 @@ import os
 import shutil
 import subprocess
 
+# URL that contains pages
+URL = "http://masterodin.github.io/Cookbook"
 
+# initialise Colorama
 init()
 
-URL = "http://masterodin.github.io/Cookbook"
 
 def setup_directory():
     #print("Setting up the directories...", end="")
@@ -113,7 +115,7 @@ def generate_cookbook(categories, recipes):
                 os.makedirs(key)
             index_file = open(os.path.join(key, "index.html"), "w")
             index_file.write("<h1>%s</h1><br />\n" % (key.title()))
-            for recipe in categories[key]:
+            for recipe in sorted(categories[key]):
                 file_url = os.path.join(URL,key,recipe+".html")
                 index_file.write("<a href='%s'>%s</a><br />\n" % (file_url, recipes[recipe]))
                 shutil.copyfile(os.path.join("processed", recipe+".html"),
